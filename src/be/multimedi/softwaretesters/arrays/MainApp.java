@@ -30,6 +30,7 @@ public class MainApp {
         // Once you've done that you can initialize its values
         monthsOfTheYear[0] = "January";
         monthsOfTheYear[1] = "February";
+        monthsOfTheYear[2] = "March";
         // ...
         monthsOfTheYear[11] = "December";
 
@@ -45,7 +46,7 @@ public class MainApp {
         // You can access an array's element by using square brackets and its index
         // Note: Arrays are zero-indexed, meaning you start counting from 0 not from 1
         String[] dwarves = {"Sneezy", "Bashful", "Sleepy", "Happy", "Grumpy", "Doc"};
-        display("My favourite dwarf is " + dwarves[0]);
+        display("My favourite dwarf is " + dwarves[dwarves.length - 1]);
 
         // 02.04 Arrays are immutable so once you set the length you cannot simply add or remove positions
         String[] playingCardSuits = new String[4];
@@ -73,6 +74,19 @@ public class MainApp {
 
         // 02.05 Multi-dimensional arrays
         // It's possible to have arrays of arrays (of arrays, of arrays, ...)
+
+
+        String[][] planeetLand = new String[2][5];
+        for (String[] planeet : planeetLand) {
+            for (String land : planeet) {
+                System.out.println(planeet + land);
+            }
+        }
+        for (int i = 0; i < planeetLand.length; i++) {
+            for (String land : planeetLand[i]) {
+                System.out.println("Dit is de " + i + "de planeet, land: " + land);
+            }
+        }
 
         String[][] chessBoard = new String[8][8];
 
